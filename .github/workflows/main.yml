@@ -34,3 +34,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          apt update && apt install -y apt-transport-https software-properties-common ca-certificates dirmngr gnupg
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ apt update && apt install -y adoptopenjdk-8-hotspot-jre
